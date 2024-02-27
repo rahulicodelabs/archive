@@ -1,0 +1,92 @@
+.landingBarContainer {
+  display: flex;
+  flex-direction: column; /* Ensures items are stacked vertically */
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-color: #FFF;
+  background-size: cover;
+  padding: 20px; /* Adds some padding around the container */
+}
+
+.introText {
+  text-align: center;
+  font-weight: bold;
+  height:auto;
+  margin-bottom: 20px; /* Adjust as needed */
+  font-size: 30px; /* Adjust as needed */
+  color: #333; /* Adjust as needed */
+}
+
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr; /* Makes each input take full width */
+  gap: 10px; /* Adjusts the gap between grid items */
+  background: #f9f9f9; /* Background color of the form */
+  padding: 20px; /* Padding around the form */
+  border-radius: 8px; /* Rounded corners for the form */
+  width: auto; /* Adjust based on your design */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+}
+
+.time .DateRangePicker {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Adjust if needed to fit the date pickers */
+  gap: 8px; /* Space between the two date inputs */
+}
+
+.time .DateInput {
+  margin-right: 8px; /* Adjust or remove as necessary */
+}
+
+input, select, .DateRangePicker {
+  height: 40px; /* Ensures consistent height */
+  border: 1px solid #ccc; /* Basic border style */
+  border-radius: 4px; /* Rounded corners for inputs and select */
+  padding: 0 10px; /* Text padding */
+}
+
+.button {
+  width: 100%; /* Makes the button full width of the form */
+  padding: 10px 0; /* Adjust button height */
+  background-color: #007bff; /* Example button color */
+  color: white; /* Text color */
+  border: none; /* Removes border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  font-size: 16px; /* Adjust as needed */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+@media (max-width: 768px) { 
+  .landingBarContainer, .bar {
+    margin-left: 10px; 
+    margin-right: 10px; 
+  }
+
+  .bar {
+    box-shadow: none; 
+  }
+
+
+  .bar, .bar form {
+    flex-direction: column;
+  }
+
+  .joy, .time, .location, .button {
+    width: 100%; 
+    margin-top: 10px; 
+    border-radius: 20px; 
+    box-shadow: none;
+  }
+  .joy:first-child {
+    margin-top: 0;
+  }
+
+  .button {
+    padding: 10px 0; 
+  }
+}
